@@ -10,12 +10,12 @@ RUN apt-get update \
 ADD internal.yaml /tmp/internal_extinction.yaml
 RUN conda env update -f /tmp/internal_extinction.yaml
 
-RUN echo "source activate tc_cross" > ~/.bashrc
 ENV PATH /opt/conda/envs/tc_cross/bin:$PATH
 ENV PYTHONPATH /root/dispel4py_workflows/tc_cross_correlation:$PYTHONPATH
 
 WORKDIR /root/
-RUN git clone https://github.com/rosafilgueira/dispel4py_workflows.git \
+RUN echo "source activate tc_cross" > ~/.bashrc \
+    && git clone https://github.com/rosafilgueira/dispel4py_workflows.git \
     && mkdir -p dispel4py_workflows/tc_cross_correlation/OUTPUT/DATA \
     && mkdir -p dispel4py_workflows/tc_cross_correlation/OUTPUT/XCORR
 
