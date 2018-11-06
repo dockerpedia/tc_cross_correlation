@@ -5,7 +5,7 @@ RUN apt-get update \
     && apt-get install -y wget \
         curl \
         python-setuptools \
-        git \
+        git
 
 ADD internal.yaml /tmp/internal_extinction.yaml
 RUN conda env update -f /tmp/internal_extinction.yaml
