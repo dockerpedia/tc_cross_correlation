@@ -89,7 +89,7 @@ dependencies:
   - scipy=1.1.0=py27hc49cb51_0
   - pip:
     - configparser==3.5.0
-    - dispel4py==1.2.1
+    - "git+git://github.com/sirspock/dispel4py.git@devel"
     - flake8==3.6.0
     - mccabe==0.6.1
     - networkx==2.2

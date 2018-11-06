@@ -9,4 +9,11 @@ RUN apt-get update \
 
 ADD internal.yaml /tmp/internal_extinction.yaml
 RUN conda env update -f /tmp/internal_extinction.yaml
+
+RUN echo "source activate tc_cross" > ~/.bashrc
+ENV PATH /opt/conda/envs/tc_cross/bin:$PATH
+ENV PYTHONPATH /root/dispel4py_workflows/tc_cross_correlation:$PYTHONPATH
+
+WORKDIR /root/
 RUN git clone https://github.com/rosafilgueira/dispel4py_workflows.git
+ADD realtime_xcorr_input.jsn dispel4py_workflows/tc_cross_correlation/realtime_xcorr_input.jsn
