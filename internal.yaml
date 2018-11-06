@@ -1,0 +1,6 @@
+name: base
+channels:
+dependencies:
+   - obspy
+   - pip:
+     - "git+git://github.com/sirspock/dispel4py.git@devel"
