@@ -1,10 +1,17 @@
 FROM continuumio/miniconda
 MAINTAINER Maximiliano Osorio <mosorio@inf.utfsm.cl>
 
-LABEL vcs-url = "https://github.com/dockerpedia/tc_cross_correlation" \
-      vcs-ref = "7dbcd5c15afc5bf3249611c8c1dfebc1376d9366" \
-      vendor  = "dockerpedia" \
-      schema-version = "1.0"
+ARG BUILD_DATE
+ARG VCS_REF
+LABEL org.label-schema.build-date=$BUILD_DATE \
+      org.label-schema.name="e.g. Example project name" \
+      org.label-schema.description="Example project description in 300 chars or less" \
+      org.label-schema.url="e.g. https://www.example.com/" \
+      org.label-schema.vcs-ref=$VCS_REF \
+      org.label-schema.vcs-url="https://github.com/dockerpedia/tc_cross_correlation" \
+      org.label-schema.vendor="DockerPedia" \
+      org.label-schema.version="1.0" \
+      org.label-schema.schema-version="1.0"
 
 RUN apt-get update \
     && apt-get install -y wget \
