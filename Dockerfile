@@ -1,6 +1,9 @@
 FROM continuumio/miniconda
 MAINTAINER Maximiliano Osorio <mosorio@inf.utfsm.cl>
 
+LABEL vcs-url = "https://github.com/nginx/nginx"
+      vcs-ref = "7dbcd5c15afc5bf3249611c8c1dfebc1376d9366"
+      
 RUN apt-get update \
     && apt-get install -y wget \
         curl \
