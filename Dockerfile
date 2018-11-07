@@ -4,9 +4,9 @@ MAINTAINER Maximiliano Osorio <mosorio@inf.utfsm.cl>
 ARG BUILD_DATE
 ARG VCS_REF
 LABEL org.label-schema.build-date=$BUILD_DATE \
-      org.label-schema.name="e.g. Example project name" \
-      org.label-schema.description="Example project description in 300 chars or less" \
-      org.label-schema.url="e.g. https://www.example.com/" \
+      org.label-schema.name="Seismic Noise Cross-Correlation" \
+      org.label-schema.description="The Seismic Ambient Noise Cross-Correlation workflow (also referred as xcorr) (Fil- guiera et al., 2014) was developed as part of the VERCE project96 for processing and cross-correlating time series (traces) from seismic stations." \
+      org.label-schema.url="http://www.verce.eu/" \
       org.label-schema.vcs-ref=$VCS_REF \
       org.label-schema.vcs-url="https://github.com/dockerpedia/tc_cross_correlation" \
       org.label-schema.vendor="DockerPedia" \
