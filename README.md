@@ -1,13 +1,21 @@
-# tc_cross_correlation
+This repository is dedicated to store "real" workflows that we have implemented for different scientific communities ( e.g., Seismologists, Astrophysics, etc) .
+Simpler dispel4py workflows can be found [here](https://github.com/rosafilgueira/dispel4py_training_material)
 
 
-**Anaconda works on most systems without root access!**
+### How to run
 
- * [Install Anaconda following the instructions on their site](https://www.continuum.io/downloads)
+First, you must run the container. In this case, the command bash will be executed.
 
- * **We strongly recommend to work with separate Anaconda environments, and especially not use the special `base` environment** (formerly named `root` on conda versions <4.4; this environment is used for all `conda` commands and environment manipulations, package installations etc.) for anything besides updating the `conda` package itself (if necessary):
+```
+docker run --interactive \
+        --tty \
+        --name tc_cross_correlation \
+        dockerpedia/tc_cross_correlation bash
+```
 
-```bash
-$ conda activate obspy  # this command used to be 'source activate obspy' on older conda versions < 4.4
-(obspy) $ 
+And run the workflow
+
+```
+root@86642e6f9e6d:/# cd dispel4py_workflows/
+root@a0f861e6fbc4:~$ dispel4py multi tc_cross_correlation/realtime_prep.py -f tc_cross_correlation/realtime_xcorr_input.jsn -n 4
 ```
