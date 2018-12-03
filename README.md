@@ -18,4 +18,5 @@ And run the workflow
 ```
 root@86642e6f9e6d:/# cd dispel4py_workflows/
 root@a0f861e6fbc4:~$ dispel4py multi tc_cross_correlation/realtime_prep.py -f tc_cross_correlation/realtime_xcorr_input.jsn -n 4
+root@a0f861e6fbc4:~$ dispel4py multi tc_cross_correlation/realtime_xcorr.py -n 4
 ```
